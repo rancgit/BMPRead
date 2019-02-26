@@ -363,7 +363,8 @@ void MyImage::setColorTalbe(const vector<MyRGB> &colorTableVec)
 
 bool MyImage::writeFile(string fileName)
 {
-    fstream outFile(fileName,ios::trunc|ios::out);
+    //fstream outFile(fileName,ios::trunc|ios::out);
+    fstream outFile(fileName,ios::out| ios::binary);
     if(!outFile.is_open())
     {
         return false;
